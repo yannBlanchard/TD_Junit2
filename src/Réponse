@@ -14,3 +14,5 @@ la technique du bouchon pour simuler une retour.
 
 
 IV)
+1) Je propose l'utilisation d'une list comme deuxieme parametre de la Hasmap
+ex : Map<String,List<String> listMot = new HashMap<>();

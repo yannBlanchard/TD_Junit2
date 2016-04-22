@@ -22,25 +22,28 @@ public class DictionaryTest {
         assertEquals(dict.getName(),"Example");
     }
 
-
-
     @Test public void testDictionaryEmpty(){
         //Dictionary dict = new Dictionary();
         assertTrue(dict.isEmpty());
     }
 
 
-    @Test public void testOneTranslation () throws ClassNotFoundException {
+    @Test public void testTranslation () throws ClassNotFoundException {
         //Dictionary dict = new Dictionary("Example");
-        dict.addTranslation("contre", "against");
-        assertEquals(dict.getTranslation("contre"), "against");
+        dict.addTranslation("Bonjour", "hi");
+        dict.addTranslation("Bonjour", "Hello");
+        assertEquals(dict.getMultipleTranslation("Bonjour"),"hi,Hello,");
     }
 
-    @Test public void testOneTranslation2 () throws ClassNotFoundException {
+
+
+    /*@Test public void testOneTranslation2 () throws ClassNotFoundException {
        // Dictionary dict = new Dictionary("Example");
-        dict.addTranslation("oui", "yes");
-        assertEquals(dict.getTranslation("oui"), "yes");
-    }
+        dict.addTranslation("Bonjour", "Hello");
+        assertEquals(dict.getTranslationMultiple("Bonjour"), "Hello");
+    }*/
+
+
 
 
 
