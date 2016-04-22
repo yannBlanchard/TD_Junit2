@@ -1,0 +1,16 @@
+I)
+5) Le nom
+
+II)
+2)
+Il est impossible de faire un test car si on n'ecrit pas l'addTranslation et getTranslation dans
+Dictionary. Aucun test ne vas se lancer car il vas nous marquer qu'une des deux méthodes n'est
+ pas implementer.
+
+
+Par contre, il est possible de faire passer un test qui n'implique qu'une seule des deux méthodes
+si on fait en sorte que addTranslation ne fasse rien et que pour getTranslation on utilise
+la technique du bouchon pour simuler une retour.
+
+
+IV)
