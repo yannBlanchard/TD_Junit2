@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by yablanch on 22/04/2016.
@@ -43,7 +40,14 @@ public class Dictionary {
     public void addTranslation(String fr, String trad){
         List<String> listTrad;
         if(listMot.get(fr) != null) {
-            listTrad = getTranslationArray(fr);
+            //listTrad = getTranslationArray(fr);
+            if(listMot.get(fr)!=null){
+                listTrad = listMot.get(fr);
+            }
+            else{
+                listTrad = null;
+            }
+
             listTrad.add(trad);
         }
         else {
@@ -53,11 +57,21 @@ public class Dictionary {
         }
     }
 
-    private List<String> getTranslationArray(String name){
-        return listMot.get(name)!=null?listMot.get(name):null;
+    public String getInverseTranslation(String en){
+        String fr ="";
+        Iterator iterator = listMot.keySet().iterator();
+        if(listMot != null) {
+
+            while (iterator.hasNext()){
+                fr = (String)iterator.next();
+                for (String value : listMot.get(fr)) {
+                    if(value.equals(en)){
+                        break;
+                    }
+                }
+            }
+        }
+        return fr;
     }
-
-
-
 
 }

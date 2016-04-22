@@ -35,7 +35,12 @@ public class DictionaryTest {
         assertEquals(dict.getMultipleTranslation("Bonjour"),"hi,Hello,");
     }
 
-
+    @Test public void testTranslationInverse () throws ClassNotFoundException {
+        //Dictionary dict = new Dictionary("Example");
+        dict.addTranslation("Bonjour", "hi");
+        dict.addTranslation("Bonjour", "Hello");
+        assertEquals("Bonjour",dict.getInverseTranslation("Hello"));
+    }
 
     /*@Test public void testOneTranslation2 () throws ClassNotFoundException {
        // Dictionary dict = new Dictionary("Example");

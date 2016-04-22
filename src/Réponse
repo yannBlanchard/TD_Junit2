@@ -4,11 +4,11 @@ I)
 II)
 2)
 Il est impossible de faire un test car si on n'ecrit pas l'addTranslation et getTranslation dans
-Dictionary. Aucun test ne vas se lancer car il vas nous marquer qu'une des deux méthodes n'est
+Dictionary. Aucun test ne vas se lancer car il vas nous marquer qu'une des deux mï¿½thodes n'est
  pas implementer.
 
 
-Par contre, il est possible de faire passer un test qui n'implique qu'une seule des deux méthodes
+Par contre, il est possible de faire passer un test qui n'implique qu'une seule des deux mï¿½thodes
 si on fait en sorte que addTranslation ne fasse rien et que pour getTranslation on utilise
 la technique du bouchon pour simuler une retour.
 
@@ -16,3 +16,7 @@ la technique du bouchon pour simuler une retour.
 IV)
 1) Je propose l'utilisation d'une list comme deuxieme parametre de la Hasmap
 ex : Map<String,List<String> listMot = new HashMap<>();
+
+V)
+2) On parcourt toute la liste des mot.Et pour chaque mot on vÃ©rifie si le mot en anglais est contenu dans la liste.
+ Si oui alors on retourne le mot sinon on passe au mot suivant.
